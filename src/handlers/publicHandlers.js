@@ -14,5 +14,12 @@ const handlerPublic=(req,res)=>{
 }
 
 const handlerCountries=(req,res)=>{
-  
+
+}
+
+module.exports={
+  handler500,
+  handler404,
+  handlerPublic,
+  handlerCountries
 }

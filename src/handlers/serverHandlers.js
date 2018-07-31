@@ -7,5 +7,10 @@ const handlerAPI=(req,res)=>{
 }
 
 const APIWrapper=(req,res)=>{
-  
+
+}
+
+module.exports={
+  handlerAPI,
+  APIWrapper
 }
