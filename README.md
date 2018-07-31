@@ -48,7 +48,8 @@ Stretch goal :
 ---
 Software architecture:
 ---
-![untitled diagram 1](https://user-images.githubusercontent.com/33840142/43459642-cc2eb824-94d6-11e8-9a10-01e19cc40a8d.png)
+
+![untitled diagram 2](https://user-images.githubusercontent.com/33840142/43460147-7b992866-94d8-11e8-9561-a078e51306a9.png)
 
 ---
 Statement process:
