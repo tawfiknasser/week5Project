@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tawfiknasser/week5Project#readme",
   "dependencies": {
+    "nodemon": "^1.18.3",
     "request": "^2.87.0"
   },
   "devDependencies": {
