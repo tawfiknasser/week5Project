@@ -9,7 +9,8 @@ Our aim:
 ---
 
 Our aim for this week project is to provide the user with updated live news according tp the country he chooses in the search box, so an updated list of suggestion of the coutries names appears according to the string/letter, thus the user can easily pick up the country name he is searching for. after that, a specific number of different type of news will be shown, the user can choose the category of the news, and then he gets a relavant news about what he's searching for. note that, the user will get different news updated news every few hours he do searching. 
----
+
+
 Project goals:
 ---
 
