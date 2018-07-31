@@ -1,10 +1,11 @@
 /*=================================================*/
 /*================= mobile & All =================*/
 /*===============================================*/
+
 body {
 /*  background-image: url("/images/pro-news-bg.jpeg"); */
 background-color:  white;
-font-size: 18px;
+font-size: 40px;
 line-height: 1.5;
 font-family: 'Karla', arial, sans-serif;
 font-weight:400;
@@ -14,27 +15,58 @@ h1{
 
 }
 .flex-container {
+
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
 }
 
 .flex-container > section {
-    background-color: #f2f2f2;
-
-
-  width: 450px;
+  background-color: #f2f2f2;
+  width: 500px;
   height: 300px;
-  margin: 0.5%;
+  margin: 5px;
   text-align: left;
-    align-content: center;
-  font-size: 50px;
+
+  font-stretch: expanded;
 }
 section{
 
 
 }
+select {
+width: 40%;
+height: 50px;
+
+   font-size: 40px;
+    padding:5px;
+    margin: 2px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    align-content:  center;
+    -webkit-box-shadow: 0 2px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f2f2f2;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-flex;
+    -webkit-appearance:none;
+    -moz-appearance: none
+
+    cursor:pointer;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+option {
+
+}
+
 /*===============================================*/
 /*================= tablet ======================*/
 /*===============================================*/
