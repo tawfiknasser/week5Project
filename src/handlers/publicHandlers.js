@@ -32,6 +32,7 @@ const handlerPublic = (req, res) => {
       js: "application/javascript",
       ico: "image/x-icon",
       jpg: "image/jpeg",
+      jpeg: "image/jpeg",
       png: "image/png",
       json: "application/json"
     };
