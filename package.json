@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/tawfiknasser/week5Project#readme",
   "dependencies": {
-
     "request": "^2.87.0"
-
   },
   "devDependencies": {
     "nyc": "^12.0.2",
