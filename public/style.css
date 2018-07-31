@@ -11,6 +11,21 @@ font-family: 'Karla', arial, sans-serif;
 font-weight:400;
 text-align: center;
 }
+.navbar {
+  overflow: hidden;
+
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+}
+.topDown{
+margin-top: 70px;
+}
+#headTitle{
+  color: white;
+}
 h1{
 
 }
