@@ -9,7 +9,6 @@ const handlerAPI=(req,res)=>{
     let url = "https://newsapi.org/v2/top-headlines?country=" + countryShortcut + "apiKey=" + API_KEY;
 
      xhrAPI(url,(xhrRes)=>{
-
       res.writeHead(200,{"Content-Type":"application/json"})
       res.end((xhrRes))
      });

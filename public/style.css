@@ -1,8 +1,12 @@
-/*================= mobile ======================*/
+/*================= mobile & All ======================*/
+body {
+/*  background-image: url("/images/pro-news-bg.jpeg"); */
+background-color:  #f2f2f2; 
+}
+h1{
+  background-color: blue;
+}
 
 /*================= tablet ======================*/
 
 /*================= desktop ======================*/
-.body {
-  background-image: url("./images/pro-news-bg.jpeg");
-}
