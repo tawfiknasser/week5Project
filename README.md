@@ -1,19 +1,16 @@
+
 Project 5 - by Tawfik, Noor & Suha.
 ---
+
 Our link:
 ---
-Our goals:
+
+Our aim:
 ---
-- [x] open repo and add this checklist
-- [x] search for api's
-- [x] decide what api and project
-- [x] agree on the idea
-- [x] agree on the way we will work  12:15
-- [ ] build software arch and push it to readme
-- [ ] write the readme
-- [ ] install the basic files and packages and push
+
+Our aim for this week project is to provide the user with updated live news according tp the country he chooses in the search box, so an updated list of suggestion of the coutries names appears according to the string/letter, thus the user can easily pick up the country name he is searching for. after that, a specific number of different type of news will be shown, the user can choose the category of the news, and then he gets a relavant news about what he's searching for. note that, the user will get different news updated news every few hours he do searching. 
 ---
-User's stories
+Project goals:
 ---
 
 - [ ] Use at least 1 API
@@ -41,3 +38,25 @@ User's stories
 .if a user attempts to make a request to a non-existent route to your server (404 - as mentioned above), provide the user with a custom response.
 .if there is a programmer error on your server (e.g. a handler function does not act as intended, or receives a datatype it is not expecting), provide the user with a custom response (500 status code).
 - [ ] Include a user input field on your web app and include server-side validation to protect your server from potentially malicious user input.
+---
+Stretch goal :
+---
+- [ ] Create a route and functionality for a POST request.
+
+- [ ] Display continuous intergration and code coverage badges on your project README.
+---
+Statement process:
+---
+- [ ] The user chooses a country name
+- [ ] a variety of live updated news appears on the page
+- [ ] the user can choose the catigory of the news he wants
+- [ ] Make sure that each time we choose to navigate, the news will be updated
+- [ ] An automatic translation to english for news in different languages
+---
+User's stories:
+---
+ - [ ] Show a list of coutries names suggestion according to the letters/string being typed.
+ - [ ] Update and filter the list of suggestion each time we add more letter.
+ - [ ] Creating a large data file (JSON).
+ - [ ] A quick and easy search through the data file and loading.
+ 
