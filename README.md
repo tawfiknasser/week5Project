@@ -46,6 +46,10 @@ Stretch goal :
 
 - [ ] Display continuous intergration and code coverage badges on your project README.
 ---
+Software architecture:
+---
+
+---
 Statement process:
 ---
 - [ ] The user chooses a country name
