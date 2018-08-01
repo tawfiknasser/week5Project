@@ -1,7 +1,16 @@
 const path = require("path");
 const fs = require("fs");
 const request = require("request");
-const searchCountry = require("../searchCountry");
+const func=require('../functions');
+const namescoun=require("../countryNames.json");
+//let testurl='https://newsapi.org/v2/top-headlines?country=au&apiKey=01b3313330fc4ce993dbddc83190e60f'
+const APIWrapper = (url, cb) => {
+ if(url==="NamesHabibi") {return cb(JSON.stringify(namescoun));}
+  request(url, function(error, response, body) {
+    if (!error) cb(body);
+
+  });
+};
 
 const handlerAPI = (req, res) => {
 
@@ -11,25 +20,28 @@ const handlerAPI = (req, res) => {
   // should handle the url with catagory
 
   let API_KEY = "01b3313330fc4ce993dbddc83190e60f";
-  let countryName = "United Kingdom"; // should delete __   // build more function
-  let SelectedCategory = "From the Link"; // build more function
-  let coutryShortcut = searchCountry(countryName);
+  let countryName = func.pureCountry(url1); // should delete' __' and return country name
+  let SelectedCategory = func.pureCategory(url1); // returns category
+  let countryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
+  let url=0;
+if (url1.indexOf("/selected/GiveMeJsonHon")==0){
 
-  // res.writeHead(200,{"Content-Type"})
-  // res.end(JSON.stringify({countryShortcut}));
-  if (true /* He selected Category*/) {
-    let url =
+   url="NamesHabibi";
+
+}
+else if (SelectedCategory != 0 /* He selected Category*/) {
+     url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
       "&category=" +
       SelectedCategory +
-      "apiKey=" +
+      "&apiKey=" +
       API_KEY;
   } else {
-    let url =
+     url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
-      "apiKey=" +
+      "&apiKey=" +
       API_KEY;
   }
 
@@ -45,12 +57,15 @@ APIWrapper(url, response => {
 };  // ======= the end of handlerAPI function
 
 
-const APIWrapper = (url, cb) => {
-  request(url, function(error, response, body) {
-    if (!error) cb(body);
-
-  });
-};
+//
+// APIWrapper(testurl, response => {
+// ====================TEST El API Request ==========
+// ==================================================
+// ==================== Oh yah working ==============
+//    console.log(response);
+//
+//
+//   });
 
 module.exports = {
   handlerAPI,

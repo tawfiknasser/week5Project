@@ -3,13 +3,18 @@ const serverhand = require("./handlers/serverHandlers");
 
 const router = (req, res) => {
   let url = req.url;
+
   if (url === "/Test500") publichand.handlerTest500(req, res);
+
   else if (
     url === "/" ||
-    ["/index.js", "/style.css", "/index.html", "/xhr.js"].includes(url)
+    ["/index.js", "/style.css", "/index.html", "/xhr.js","/logic.js"].includes(url)
   ) {
     publichand.handlerPublic(req, res);
-  } else if (url.indexOf("selected") == 0) {
+  }
+
+   else if (url.indexOf("selected") == 0 || url.indexOf("/selected") == 0) {
+
     serverhand.handlerAPI(req, res);
   }
 
@@ -17,6 +22,7 @@ const router = (req, res) => {
   //   publichand.handlerCountries(req,res);
   // }
   else {
+
     publichand.handler404(res);
   }
 };
