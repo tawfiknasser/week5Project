@@ -14,6 +14,7 @@ const handlerAPI = (req, res) => {
   let countryName = "United Kingdom"; // should delete __   // build more function
   let SelectedCategory = "From the Link"; // build more function
   let coutryShortcut = searchCountry(countryName);
+
   // res.writeHead(200,{"Content-Type"})
   // res.end(JSON.stringify({countryShortcut}));
   if (true /* He selected Category*/) {
@@ -39,6 +40,7 @@ const handlerAPI = (req, res) => {
 APIWrapper(url, response => {
    res.writeHead(200, { "Content-Type": "application/json" });
    res.end(response);
+
   });
 };  // ======= the end of handlerAPI function
 

@@ -1,6 +1,6 @@
-var SelectedCountry="change later";//get element value
-var SelectedCategory="change later";//get element value
-// ^^^^ From Gobtn ^^^^
+var SelectedCountry = "change later"; //get element value
+var SelectedCategory = "change later"; //get element value
+
 
 function sendData(SelectedCountry,SelectedCategory){ // on clicking GO button
 
@@ -10,6 +10,7 @@ if(callCountry(SelectedCountry)==='bad') return;
 xhrCall(url,appendnews);
 }
 
-function appendNews(response){ // the response is the object
-// creating elements
+function appendNews(response){ // the response is the object                         ///
+// creating elements                                                              ///
+
 }
