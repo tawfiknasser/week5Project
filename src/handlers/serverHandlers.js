@@ -2,6 +2,13 @@ const path = require("path");
 const fs = require("fs");
 const request = require("request");
 const func=require('../functions');
+//let testurl='https://newsapi.org/v2/top-headlines?country=au&apiKey=01b3313330fc4ce993dbddc83190e60f'
+const APIWrapper = (url, cb) => {
+  request(url, function(error, response, body) {
+    if (!error) cb(body);
+
+  });
+};
 
 const handlerAPI = (req, res) => {
 
@@ -15,8 +22,6 @@ const handlerAPI = (req, res) => {
   let SelectedCategory = func.pureCategory(url1); // returns category
   let coutryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
 
-  // res.writeHead(200,{"Content-Type"})
-  // res.end(JSON.stringify({countryShortcut}));
   if (SelectedCategory != 0 /* He selected Category*/) {
     let url =
       "https://newsapi.org/v2/top-headlines?country=" +
@@ -45,12 +50,15 @@ APIWrapper(url, response => {
 };  // ======= the end of handlerAPI function
 
 
-const APIWrapper = (url, cb) => {
-  request(url, function(error, response, body) {
-    if (!error) cb(body);
-
-  });
-};
+//
+// APIWrapper(testurl, response => {
+// ====================TEST El API Request ==========
+// ==================================================
+// ==================== Oh yah working ==============
+//    console.log(response);
+//
+//
+//   });
 
 module.exports = {
   handlerAPI,
