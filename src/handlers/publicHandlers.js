@@ -50,6 +50,7 @@ const handlerPublic = (req, res) => {
 
 
 const handlerCountries = (req, res) => {};
+
 const handlerTest500 = (req, res) => {
   fs.readFile(
     path.join(__dirname, "..", "..", "public", "NONE"),

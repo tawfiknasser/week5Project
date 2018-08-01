@@ -3,18 +3,13 @@ function xhrCall(url, callback) {
   myRequest.onreadystatechange = function() {
     if (myRequest.readyState === 4 && myRequest.status === 200) {
       var response = JSON.parse(myRequest.responseText);
-      return callback(response);
+       callback(response);
     }
   };
   myRequest.open("GET", url);
   myRequest.send();
 }
 
-function callCountry(SelectedCountry){
-  xhrCall()
-  return ;
-}
-
-function callCategory(SelectedCategory){
-
-}
+// function callCountry(SelectedCountry,cb){
+//   xhrCall('SelectedCountry/'+SelectedCountr,cb)
+// }
