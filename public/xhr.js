@@ -1,4 +1,4 @@
-function xhr(url, callback) {
+function xhrCall(url, callback) {
   var myRequest = new xmlHttpRequest();
   myRequest.onreadystatechange = function() {
     if (myRequest.readyState === 4 && myRequest.status === 200) {
@@ -8,4 +8,13 @@ function xhr(url, callback) {
   };
   myRequest.open("GET", url);
   myRequest.send();
+}
+
+function callCountry(SelectedCountry){
+  xhrCall()
+  return ;
+}
+
+function callCategory(SelectedCategory){
+
 }
