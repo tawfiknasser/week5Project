@@ -4,6 +4,7 @@ const request = require("request");
 const searchCountry = require("../searchCountry");
 
 const handlerAPI = (req, res) => {
+
   let url1 = req.url; // 'selected/United_Kingdom  or
   // selected/United_Kingdom&category=SelectedCategory
 
@@ -40,6 +41,7 @@ APIWrapper(url, response => {
    res.end(response);
   });
 };  // ======= the end of handlerAPI function
+
 
 const APIWrapper = (url, cb) => {
   request(url, function(error, response, body) {
