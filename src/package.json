@@ -1,0 +1,13 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "router.js",
+  "scripts": {
+    "test": "node ./test.js | tap-spec",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "tap-spec": "^5.0.0"
+}
