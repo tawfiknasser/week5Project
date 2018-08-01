@@ -17,9 +17,13 @@ const router = (req, res) => {
     publichand.handlerPublic(req, res);
   } else if (url.indexOf("selected")==0) {
     serverhand.handlerAPI(req, res);
-  }else if(url.includes("searchMeCountry")) {
-    publichand.handlerCountries(req,res);
   }
+
+  // else if(url.includes("searchMeCountry")) {
+  //   publichand.handlerCountries(req,res);
+  // }
+
+
    else {
     publichand.handler404(res);
   }
