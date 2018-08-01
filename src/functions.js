@@ -3,7 +3,6 @@ const searchCountry = (name) => {
   stringObj = JSON.parse(stringObj);
   let arr = [];
   arr = Object.keys(stringObj);
-  //console.log(arr);
 
   for (let i = 0; i < arr.length; i++) {
     if (stringObj[arr[i]] === name) return stringObj[arr[i]];
