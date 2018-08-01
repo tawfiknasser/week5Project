@@ -11,12 +11,12 @@ const handlerAPI = (req, res) => {
   let countryName = "United Kingdom"; // should delete __
   let SelectedCategory = "From the Link";
   let coutryShortcut = searchCountry(countryName);
-  //     if(/* He selected Category*/) {
-  //     let url = "https://newsapi.org/v2/top-headlines?country=" +
-  //      countryShortcut+ "&category="+SelectedCategory +  "apiKey=" + API_KEY;
-  //    };
-  // else   let url = "https://newsapi.org/v2/top-headlines?country=" +
-  //      countryShortcut+ "apiKey=" + API_KEY;
+      if(/* He selected Category*/) {
+      let url = "https://newsapi.org/v2/top-headlines?country=" +
+       countryShortcut+ "&category="+SelectedCategory +  "apiKey=" + API_KEY;
+     }
+  else   let url = "https://newsapi.org/v2/top-headlines?country=" +
+       countryShortcut+ "apiKey=" + API_KEY;
 
   xhrAPI(url, xhrRes => {
     res.writeHead(200, { "Content-Type": "application/json" });
