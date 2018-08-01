@@ -12,9 +12,13 @@ const searchCountry = (name,Obj=countryObj) => {
 }
 // should delete __
 const pureCountry=(url1)=>{
-let countryName = url1.replace("_", " "); // selected/United_Kingdom&category=SelectedCategory
-countryName=countryName.slice(countryName.indexOf('/')+1,countryName.indexOf("&"));
-return countryName;
+let countryName = url1.replace("_", " "); // /selected/United_Kingdom&category=SelectedCategory
+if(countryName.indexOf("&")>0){
+countryName=countryName.slice(countryName.indexOf('d/')+2,countryName.indexOf("&"));
+return countryName;}
+ // else it will be /selected/United Kingdom
+ countryName = url1.replace("/selected/", "");
+ return countryName;
 }
 
 const pureCategory=(url1)=>{

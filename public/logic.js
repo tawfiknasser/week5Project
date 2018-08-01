@@ -7,7 +7,7 @@
 
 
 function callCategory(SelectedCategory){
-  if(SelectedCategory==='bad') return;
+  if(SelectedCategory==='bad') return "";
   return '&category='+SelectedCategory;
 }
 
@@ -19,7 +19,7 @@ function callCountry(SelectedCountry){
 }
 
 function addUnderscore(SelectedCountry){
-  SelectedCountry = url1.replace(" ", "_");
+  SelectedCountry = SelectedCountry.replace(" ", "_");
   return SelectedCountry;
 }
 

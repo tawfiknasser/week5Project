@@ -9,12 +9,13 @@ let url="selected/"+callCountry(SelectedCountry)+callCategory(SelectedCategory);
 if(callCountry(SelectedCountry)==='bad')
 return; // Don't Do any thing if no country selected
 
-xhrCall(url,appendnews);
+xhrCall(url,appendNews);
 }
 
 function appendNews(response){ // the response is the object  of news
 // creating elements
-
+var length=response['totalResults'];
+console.log(response);
 
 }
 function appendCountries(response){  // the response is the object of countries

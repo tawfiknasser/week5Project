@@ -21,6 +21,7 @@ const handlerAPI = (req, res) => {
 
   let API_KEY = "01b3313330fc4ce993dbddc83190e60f";
   let countryName = func.pureCountry(url1); // should delete' __' and return country name
+console.log(countryName);
   let SelectedCategory = func.pureCategory(url1); // returns category
   let countryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
   let url=0;
@@ -29,7 +30,7 @@ if (url1.indexOf("/selected/GiveMeJsonHon")==0){
    url="NamesHabibi";
 
 }
-else if (SelectedCategory != 0 /* He selected Category*/) {
+else if (SelectedCategory != "" /* He selected Category*/) {
      url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
