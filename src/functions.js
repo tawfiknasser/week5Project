@@ -1,14 +1,15 @@
+const countryObj=require('./countryNames.json')
+
 // should return the country Shortcut
-const searchCountry = (name) => {
-  stringObj = JSON.parse(stringObj);
+const searchCountry = (name,Obj=countryObj) => {
   let arr = [];
-  arr = Object.keys(stringObj);
+  arr = Object.keys(Obj);
 
   for (let i = 0; i < arr.length; i++) {
-    if (stringObj[arr[i]] === name) return stringObj[arr[i]];
+    if (Obj[arr[i]] === name) return arr[i];
   }
-}
 
+}
 // should delete __
 const pureCountry=(url1)=>{
 let countryName = url1.replace("_", " "); // selected/United_Kingdom&category=SelectedCategory
