@@ -15,7 +15,10 @@ xhrCall(url,appendNews);
 function appendNews(response){ // the response is the object  of news
 // creating elements
 var length=response['totalResults'];
-console.log(response);
+for(var i=0;i<length;i++){
+//append here
+
+}
 
 }
 function appendCountries(response){  // the response is the object of countries
@@ -27,7 +30,5 @@ function appendCountries(response){  // the response is the object of countries
   countrySection.appendChild(op);
   op.textContent=response[el];
 });
-{
 
-}
 }
