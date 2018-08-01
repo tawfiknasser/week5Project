@@ -29,7 +29,6 @@ function addUnderscore(SelectedCountry){
 function cutDis(discription) {
   var str1 = "" + "...";
   var str = discription.slice(0, 88) + str1;
-  console.log(str);
   return str;
 }
 

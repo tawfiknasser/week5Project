@@ -25,9 +25,9 @@ const handlerAPI = (req, res) => {
   let countryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
   let url=0;
 if (url1.indexOf("/selected/GiveMeJsonHon")==0){
-//
+
    url="NamesHabibi";
- //console.log(res);
+
 }
 else if (SelectedCategory != 0 /* He selected Category*/) {
      url =

@@ -10,7 +10,7 @@ const handler404 = res => {
     path.join(__dirname, "..", "..", "public", "404.html"),
 
     (err, file) => {
-      console.log("hiiiii");
+      
       if (err) {
         handler500(res);
         return;

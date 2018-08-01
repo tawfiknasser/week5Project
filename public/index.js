@@ -17,5 +17,5 @@ function appendNews(response){ // the response is the object  of news           
 
 }
 function appendCountries(response){  // the response is the object of countries
-  console.log("Gggggs");
+
 }
