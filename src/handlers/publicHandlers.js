@@ -48,10 +48,25 @@ const handlerPublic = (req, res) => {
 };
 
 const handlerCountries = (req, res) => {};
+const handlerTest500 = (req, res) => {
+  fs.readFile(
+    path.join(__dirname, "..", "..", "public", "NONE"),
 
+    (err, file) => {
+      if (err) {
+        handler500(res);
+        return;
+      } else {
+        res.writeHead(404, { "content-type": "text/html" });
+        res.end(file);
+      }
+    }
+  );
+};
 module.exports = {
   handler500,
   handler404,
   handlerPublic,
-  handlerCountries
+  handlerCountries,
+  handlerTest500
 };
