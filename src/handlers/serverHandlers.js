@@ -2,8 +2,10 @@ const path = require("path");
 const fs = require("fs");
 const request = require("request");
 const func=require('../functions');
+const namescoun=require("../countryNames.json");
 //let testurl='https://newsapi.org/v2/top-headlines?country=au&apiKey=01b3313330fc4ce993dbddc83190e60f'
 const APIWrapper = (url, cb) => {
+ if(url==="NamesHabibi") {return cb(JSON.stringify(namescoun));}
   request(url, function(error, response, body) {
     if (!error) cb(body);
 
@@ -20,10 +22,15 @@ const handlerAPI = (req, res) => {
   let API_KEY = "01b3313330fc4ce993dbddc83190e60f";
   let countryName = func.pureCountry(url1); // should delete' __' and return country name
   let SelectedCategory = func.pureCategory(url1); // returns category
-  let coutryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
-
-  if (SelectedCategory != 0 /* He selected Category*/) {
-    let url =
+  let countryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
+  let url=0;
+if (url1.indexOf("/selected/GiveMeJsonHon")==0){
+//
+   url="NamesHabibi";
+ //console.log(res);
+}
+else if (SelectedCategory != 0 /* He selected Category*/) {
+     url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
       "&category=" +
@@ -31,7 +38,7 @@ const handlerAPI = (req, res) => {
       "&apiKey=" +
       API_KEY;
   } else {
-    let url =
+     url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
       "&apiKey=" +

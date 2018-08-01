@@ -1,3 +1,10 @@
+(function GenerateCountries(){
+  // Generate Countries Names For the options listener
+  // Put them in an array  in appendCountries
+
+  xhrCall("/selected/GiveMeJsonHon",appendCountries);
+})();
+
 
 function callCategory(SelectedCategory){
   if(SelectedCategory==='bad') return;

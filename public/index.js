@@ -1,6 +1,3 @@
-var SelectedCountry = "change later"; //get element value
-var SelectedCategory = "change later"; //get element value
-
 
 function sendData(SelectedCountry,SelectedCategory){ // on clicking GO button
 
@@ -15,7 +12,10 @@ return; // Don't Do any thing if no country selected
 xhrCall(url,appendnews);
 }
 
-function appendNews(response){ // the response is the object                         ///
+function appendNews(response){ // the response is the object  of news                   ///
 // creating elements                                                              ///
 
+}
+function appendCountries(response){  // the response is the object of countries
+  console.log("Gggggs");
 }
