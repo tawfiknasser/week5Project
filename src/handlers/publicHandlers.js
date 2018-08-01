@@ -15,7 +15,7 @@ const handler404 = res => {
         handler500(res);
         return;
       } else {
-        res.writeHead(200, { "content-type": "text/html" });
+        res.writeHead(404, { "content-type": "text/html" });
         res.end(file);
       }
     }
@@ -47,7 +47,9 @@ const handlerPublic = (req, res) => {
     });
 };
 
-const handlerCountries = (req, res) => {};
+const handlerCountries = (req, res) => {
+
+};
 
 module.exports = {
   handler500,
