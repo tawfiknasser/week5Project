@@ -12,10 +12,21 @@ return; // Don't Do any thing if no country selected
 xhrCall(url,appendnews);
 }
 
-function appendNews(response){ // the response is the object  of news                   ///
-// creating elements                                                              ///
+function appendNews(response){ // the response is the object  of news
+// creating elements
+
 
 }
 function appendCountries(response){  // the response is the object of countries
 
+  var countrySection=document.getElementById("country");
+(Object.keys(response)).forEach(function(el){
+  var op = document.createElement("option");
+  op.setAttribute("value",response[el]);
+  countrySection.appendChild(op);
+  op.textContent=response[el];
+});
+{
+
+}
 }
