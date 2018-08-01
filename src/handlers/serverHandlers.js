@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const request = require("request");
-const searchCountry = require("../searchCountry");
+const func=require('../functions');
 
 const handlerAPI = (req, res) => {
 
@@ -11,25 +11,25 @@ const handlerAPI = (req, res) => {
   // should handle the url with catagory
 
   let API_KEY = "01b3313330fc4ce993dbddc83190e60f";
-  let countryName = "United Kingdom"; // should delete __   // build more function
-  let SelectedCategory = "From the Link"; // build more function
-  let coutryShortcut = searchCountry(countryName);
+  let countryName = func.pureCountry(url1); // should delete' __' and return country name
+  let SelectedCategory = func.pureCategory(url1); // returns category
+  let coutryShortcut = func.searchCountry(countryName); // return coutryShortcut will need JSON file
 
   // res.writeHead(200,{"Content-Type"})
   // res.end(JSON.stringify({countryShortcut}));
-  if (true /* He selected Category*/) {
+  if (SelectedCategory != 0 /* He selected Category*/) {
     let url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
       "&category=" +
       SelectedCategory +
-      "apiKey=" +
+      "&apiKey=" +
       API_KEY;
   } else {
     let url =
       "https://newsapi.org/v2/top-headlines?country=" +
       countryShortcut +
-      "apiKey=" +
+      "&apiKey=" +
       API_KEY;
   }
 
