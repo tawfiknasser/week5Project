@@ -1,9 +1,9 @@
-var http = require("http");
-var router = require("./router");
+const http = require("http");
+const router = require("./router");
 
-var server = http.createServer(router);
-var port = process.env.PORT || 6002;
+const server = http.createServer(router);
+const port = process.env.PORT || 6002;
 
-server.listen(port, function() {
+server.listen(port, () => {
   console.log("Listening to port: " + port);
 });
