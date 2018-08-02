@@ -1,7 +1,7 @@
 //using supertest & tape
 
 const test = require("tape");
-const router = require("../router");
+const router = require("./router");
 const supertest = require("supertest");
 
 test("Initialize", t => {
