@@ -1,11 +1,11 @@
 {
   "name": "week5project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project 5 - by Tawfik, Noor & Suha. ---",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "test": "node serverTests.js | tap-spec",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

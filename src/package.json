@@ -1,0 +1,21 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "functions.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node serverTests.js | tap-spec",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "supertest": "^3.1.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "dependencies": {},
+  "description": ""
+}
