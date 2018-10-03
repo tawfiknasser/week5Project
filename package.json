@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node serverTests.js | tap-spec",
-    "start": "./src/node server.js"
+    "start": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
